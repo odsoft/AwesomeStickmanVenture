@@ -1,0 +1,16 @@
+[gd_scene format=3 uid="uid://dguvr8idt6y62"]
+
+[ext_resource type="Script" uid="uid://db35ovrv684ug" path="res://Scripts/screeneffects/fade.gd" id="1_prnny"]
+
+[node name="Fade" type="CanvasLayer" unique_id=1457466083]
+process_mode = 3
+layer = 99
+script = ExtResource("1_prnny")
+
+[node name="FadeColor" type="ColorRect" parent="." unique_id=1337387925]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 1)

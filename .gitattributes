@@ -1,0 +1,11 @@
+# .gitattributes - Protect binary assets from corruption
+
+# Images
+*.png binary
+*.PNG binary
+
+# Audio
+*.ogg binary
+*.OGG binary
+*.wav binary
+*.WAV binary

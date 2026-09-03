@@ -1,0 +1,7 @@
+[gd_scene format=3 uid="uid://bll8br720wy70"]
+
+[ext_resource type="Script" uid="uid://drwus2b67e081" path="res://Scenes/sfx_player.gd" id="1_g0cor"]
+
+[node name="SfxPlayer" type="AudioStreamPlayer" unique_id=841047845]
+process_mode = 3
+script = ExtResource("1_g0cor")

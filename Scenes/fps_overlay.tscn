@@ -1,0 +1,13 @@
+[gd_scene format=3 uid="uid://cn6kbsht5yuym"]
+
+[ext_resource type="Script" uid="uid://cfpdy6lnwhven" path="res://Scenes/fps_overlay.gd" id="1_l2a41"]
+
+[node name="FpsOverlay" type="CanvasLayer" unique_id=935133544]
+process_mode = 3
+layer = 100
+visible = false
+script = ExtResource("1_l2a41")
+
+[node name="FpsLabel" type="Label" parent="." unique_id=2076045379]
+offset_right = 40.0
+offset_bottom = 25.0

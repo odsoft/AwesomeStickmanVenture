@@ -1,0 +1,502 @@
+[gd_scene format=3 uid="uid://deyt3ql2hdvet"]
+
+[ext_resource type="Script" uid="uid://drg3lk208v7fg" path="res://Scripts/title_screen.gd" id="1_4gxqj"]
+[ext_resource type="Script" uid="uid://dlse66eigqtel" path="res://backgroung.gd" id="2_4gxqj"]
+[ext_resource type="Texture2D" uid="uid://bg3kbrmbu10w0" path="res://Visuals/logos/ASV logo.png" id="3_4gxqj"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_p3fck"]
+font_size = 12
+
+[node name="TitleScreen" type="Control" unique_id=2056875251]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_4gxqj")
+
+[node name="TitleUI" type="CanvasLayer" parent="." unique_id=1200213320]
+process_mode = 1
+
+[node name="backgroung" type="ColorRect" parent="TitleUI" unique_id=2008669002]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 1)
+script = ExtResource("2_4gxqj")
+
+[node name="TitleMenu" type="CanvasLayer" parent="TitleUI" unique_id=756084863]
+
+[node name="TitleOptions" type="VBoxContainer" parent="TitleUI/TitleMenu" unique_id=1093471804]
+custom_minimum_size = Vector2(200, 0)
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -58.0
+offset_top = 45.339996
+offset_right = 58.0
+offset_bottom = 189.3407
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="PlayButton" type="Button" parent="TitleUI/TitleMenu/TitleOptions" unique_id=1310890732]
+layout_mode = 2
+mouse_default_cursor_shape = 2
+text = "title_root_play"
+
+[node name="SetButton" type="Button" parent="TitleUI/TitleMenu/TitleOptions" unique_id=456531742]
+layout_mode = 2
+mouse_default_cursor_shape = 2
+text = "title_root_set"
+
+[node name="ExitButton" type="Button" parent="TitleUI/TitleMenu/TitleOptions" unique_id=985581347]
+layout_mode = 2
+mouse_default_cursor_shape = 2
+text = "title_root_exit"
+
+[node name="EraseSuccess" type="CanvasLayer" parent="TitleUI/TitleMenu" unique_id=1539039571]
+layer = 95
+visible = false
+
+[node name="EraseSuccessBackground" type="ColorRect" parent="TitleUI/TitleMenu/EraseSuccess" unique_id=1559392677]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 0.77254903)
+
+[node name="EraseSuccessOptions" type="VBoxContainer" parent="TitleUI/TitleMenu/EraseSuccess" unique_id=1390593764]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -20.0
+offset_right = 20.0
+offset_bottom = 20.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="EraseSuccessLabelHead" type="Label" parent="TitleUI/TitleMenu/EraseSuccess/EraseSuccessOptions" unique_id=1093151]
+layout_mode = 2
+text = "confirm_complete"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="EraseSuccessLabel" type="Label" parent="TitleUI/TitleMenu/EraseSuccess/EraseSuccessOptions" unique_id=608826539]
+layout_mode = 2
+text = "set_general_erase_success"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="EraseSuccessYesNo" type="HBoxContainer" parent="TitleUI/TitleMenu/EraseSuccess/EraseSuccessOptions" unique_id=502999963]
+layout_mode = 2
+alignment = 1
+
+[node name="EraseSuccessOkButton" type="Button" parent="TitleUI/TitleMenu/EraseSuccess/EraseSuccessOptions/EraseSuccessYesNo" unique_id=1576046844]
+custom_minimum_size = Vector2(75, 0)
+layout_mode = 2
+mouse_default_cursor_shape = 2
+text = "button_ok"
+
+[node name="TextureRect" type="TextureRect" parent="TitleUI/TitleMenu" unique_id=56095694]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -243.75
+offset_top = -218.655
+offset_right = 243.75
+offset_bottom = -23.655273
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("3_4gxqj")
+expand_mode = 1
+
+[node name="SettingsMenu" type="CanvasLayer" parent="TitleUI" unique_id=1997028052]
+visible = false
+
+[node name="SetOptions" type="VBoxContainer" parent="TitleUI/SettingsMenu" unique_id=1623846583]
+custom_minimum_size = Vector2(200, 0)
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -64.5
+offset_top = -142.0
+offset_right = 64.5
+offset_bottom = 142.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="SetLabel" type="Label" parent="TitleUI/SettingsMenu/SetOptions" unique_id=1857348228]
+layout_mode = 2
+text = "title_root_set"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="GenButton" type="Button" parent="TitleUI/SettingsMenu/SetOptions" unique_id=599627033]
+layout_mode = 2
+mouse_default_cursor_shape = 2
+text = "settings_general"
+
+[node name="VidButton" type="Button" parent="TitleUI/SettingsMenu/SetOptions" unique_id=933341178]
+layout_mode = 2
+mouse_default_cursor_shape = 2
+text = "settings_video"
+
+[node name="AudButton" type="Button" parent="TitleUI/SettingsMenu/SetOptions" unique_id=1253574556]
+layout_mode = 2
+mouse_default_cursor_shape = 2
+text = "settings_audio"
+
+[node name="InpButton" type="Button" parent="TitleUI/SettingsMenu/SetOptions" unique_id=788362903]
+layout_mode = 2
+mouse_default_cursor_shape = 2
+text = "settings_input"
+
+[node name="AccButton" type="Button" parent="TitleUI/SettingsMenu/SetOptions" unique_id=415530317]
+layout_mode = 2
+mouse_default_cursor_shape = 8
+disabled = true
+text = "settings_access"
+
+[node name="AtrButton" type="Button" parent="TitleUI/SettingsMenu/SetOptions" unique_id=1001330167]
+layout_mode = 2
+mouse_default_cursor_shape = 8
+disabled = true
+text = "settings_credits"
+
+[node name="FeedButton" type="Button" parent="TitleUI/SettingsMenu/SetOptions" unique_id=1073641924]
+layout_mode = 2
+mouse_default_cursor_shape = 2
+text = "settings_feedback"
+
+[node name="SetBackButton" type="Button" parent="TitleUI/SettingsMenu/SetOptions" unique_id=1410870203]
+layout_mode = 2
+mouse_default_cursor_shape = 2
+text = "button_back"
+
+[node name="BuildLabel" type="Label" parent="TitleUI/SettingsMenu" unique_id=1527238115]
+anchors_preset = 2
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_top = -25.0
+offset_right = 40.0
+grow_vertical = 0
+text = "x.x.x"
+label_settings = SubResource("LabelSettings_p3fck")
+
+[node name="SettingsGeneralMenu" type="CanvasLayer" parent="TitleUI" unique_id=1674615678]
+visible = false
+
+[node name="SetGenOptions" type="VBoxContainer" parent="TitleUI/SettingsGeneralMenu" unique_id=2115891032]
+custom_minimum_size = Vector2(200, 0)
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -78.5
+offset_top = -83.5
+offset_right = 78.5
+offset_bottom = 83.5
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="GameDirButton" type="Button" parent="TitleUI/SettingsGeneralMenu/SetGenOptions" unique_id=10243300]
+layout_mode = 2
+mouse_default_cursor_shape = 2
+text = "set_general_opendir"
+
+[node name="LangLabel" type="Label" parent="TitleUI/SettingsGeneralMenu/SetGenOptions" unique_id=1813187419]
+layout_mode = 2
+text = "set_general_lang"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="LangButton" type="OptionButton" parent="TitleUI/SettingsGeneralMenu/SetGenOptions" unique_id=480484512]
+layout_mode = 2
+mouse_default_cursor_shape = 2
+
+[node name="EraseSetButton" type="Button" parent="TitleUI/SettingsGeneralMenu/SetGenOptions" unique_id=1003360753]
+layout_mode = 2
+mouse_default_cursor_shape = 2
+theme_override_colors/font_color = Color(1, 0.18, 0.18, 1)
+theme_override_colors/font_focus_color = Color(1, 0.18, 0.18, 1)
+theme_override_colors/font_pressed_color = Color(1, 0.18, 0.18, 1)
+theme_override_colors/font_hover_color = Color(1, 0.18, 0.18, 1)
+theme_override_colors/font_hover_pressed_color = Color(1, 0.18, 0.18, 1)
+text = "set_general_erase"
+
+[node name="SetGenBackButton" type="Button" parent="TitleUI/SettingsGeneralMenu/SetGenOptions" unique_id=1749666142]
+layout_mode = 2
+mouse_default_cursor_shape = 2
+text = "button_back"
+
+[node name="EraseConfirm" type="CanvasLayer" parent="TitleUI/SettingsGeneralMenu" unique_id=60388095]
+layer = 95
+visible = false
+
+[node name="EraseConfirmBackground" type="ColorRect" parent="TitleUI/SettingsGeneralMenu/EraseConfirm" unique_id=19695359]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 0.77254903)
+
+[node name="EraseConfirmOptions" type="VBoxContainer" parent="TitleUI/SettingsGeneralMenu/EraseConfirm" unique_id=596147629]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -20.0
+offset_right = 20.0
+offset_bottom = 20.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="EraseConfirmLabelHead" type="Label" parent="TitleUI/SettingsGeneralMenu/EraseConfirm/EraseConfirmOptions" unique_id=793332533]
+layout_mode = 2
+text = "ask_sure"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="EraseConfirmLabel" type="Label" parent="TitleUI/SettingsGeneralMenu/EraseConfirm/EraseConfirmOptions" unique_id=392541775]
+layout_mode = 2
+text = "set_general_erase_ask"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="EraseConfirmYesNo" type="HBoxContainer" parent="TitleUI/SettingsGeneralMenu/EraseConfirm/EraseConfirmOptions" unique_id=587635890]
+layout_mode = 2
+alignment = 1
+
+[node name="EraseYesButton" type="Button" parent="TitleUI/SettingsGeneralMenu/EraseConfirm/EraseConfirmOptions/EraseConfirmYesNo" unique_id=624181260]
+custom_minimum_size = Vector2(75, 0)
+layout_mode = 2
+mouse_default_cursor_shape = 2
+text = "button_yes"
+
+[node name="EraseNoButton" type="Button" parent="TitleUI/SettingsGeneralMenu/EraseConfirm/EraseConfirmOptions/EraseConfirmYesNo" unique_id=1409565891]
+custom_minimum_size = Vector2(75, 0)
+layout_mode = 2
+mouse_default_cursor_shape = 2
+text = "button_no"
+
+[node name="SettingsVideoMenu" type="CanvasLayer" parent="TitleUI" unique_id=806631705]
+visible = false
+
+[node name="GpuLabel" type="Label" parent="TitleUI/SettingsVideoMenu" unique_id=2105775511]
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -72.0
+offset_right = 72.0
+offset_bottom = 25.0
+grow_horizontal = 2
+text = "set_video_gpu"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="SetVidOptions" type="VBoxContainer" parent="TitleUI/SettingsVideoMenu" unique_id=373195959]
+custom_minimum_size = Vector2(200, 0)
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -20.0
+offset_right = 20.0
+offset_bottom = 20.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="ResLabel" type="Label" parent="TitleUI/SettingsVideoMenu/SetVidOptions" unique_id=56952788]
+layout_mode = 2
+text = "set_video_resolution"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="SetVidResButton" type="OptionButton" parent="TitleUI/SettingsVideoMenu/SetVidOptions" unique_id=107744940]
+layout_mode = 2
+mouse_default_cursor_shape = 2
+
+[node name="VsyncButton" type="CheckButton" parent="TitleUI/SettingsVideoMenu/SetVidOptions" unique_id=1843474275]
+layout_mode = 2
+mouse_default_cursor_shape = 2
+text = "set_video_vsync"
+
+[node name="FpsLabel" type="Label" parent="TitleUI/SettingsVideoMenu/SetVidOptions" unique_id=1613941459]
+layout_mode = 2
+text = "set_video_fpslimit"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="FpsSlider" type="HSlider" parent="TitleUI/SettingsVideoMenu/SetVidOptions" unique_id=16486463]
+layout_mode = 2
+mouse_default_cursor_shape = 10
+max_value = 30.0
+
+[node name="FpsButton" type="CheckButton" parent="TitleUI/SettingsVideoMenu/SetVidOptions" unique_id=1125138346]
+layout_mode = 2
+mouse_default_cursor_shape = 2
+text = "set_video_showfps"
+
+[node name="DispLabel" type="Label" parent="TitleUI/SettingsVideoMenu/SetVidOptions" unique_id=2046472940]
+layout_mode = 2
+text = "set_video_dispmode"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="SetVidDispButton" type="OptionButton" parent="TitleUI/SettingsVideoMenu/SetVidOptions" unique_id=1202944657]
+layout_mode = 2
+mouse_default_cursor_shape = 2
+item_count = 3
+popup/item_0/text = "set_video_dispmode_windowed"
+popup/item_0/id = 0
+popup/item_1/text = "set_video_dispmode_borderless"
+popup/item_1/id = 1
+popup/item_2/text = "set_video_dispmode_fullscreen"
+popup/item_2/id = 2
+
+[node name="SetVidApplyButton" type="Button" parent="TitleUI/SettingsVideoMenu/SetVidOptions" unique_id=1365383900]
+layout_mode = 2
+mouse_default_cursor_shape = 2
+text = "button_apply"
+
+[node name="SetVidBackButton" type="Button" parent="TitleUI/SettingsVideoMenu/SetVidOptions" unique_id=682158955]
+layout_mode = 2
+mouse_default_cursor_shape = 2
+text = "button_back"
+
+[node name="SettingsAudioMenu" type="CanvasLayer" parent="TitleUI" unique_id=937797145]
+visible = false
+
+[node name="SetAudOptions" type="VBoxContainer" parent="TitleUI/SettingsAudioMenu" unique_id=747762014]
+custom_minimum_size = Vector2(200, 0)
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -59.0
+offset_top = -41.0
+offset_right = 59.0
+offset_bottom = 41.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="VolLabel" type="Label" parent="TitleUI/SettingsAudioMenu/SetAudOptions" unique_id=1687541521]
+layout_mode = 2
+text = "set_audio_volume"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="VolSlider" type="HSlider" parent="TitleUI/SettingsAudioMenu/SetAudOptions" unique_id=780484746]
+layout_mode = 2
+mouse_default_cursor_shape = 10
+
+[node name="BgmVolLabel" type="Label" parent="TitleUI/SettingsAudioMenu/SetAudOptions" unique_id=32557766]
+layout_mode = 2
+text = "set_audio_bgm_volume"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="BgmVolSlider" type="HSlider" parent="TitleUI/SettingsAudioMenu/SetAudOptions" unique_id=1057554419]
+layout_mode = 2
+mouse_default_cursor_shape = 10
+
+[node name="SfxVolLabel" type="Label" parent="TitleUI/SettingsAudioMenu/SetAudOptions" unique_id=1375905138]
+layout_mode = 2
+text = "set_audio_sfx_volume"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="SfxVolSlider" type="HSlider" parent="TitleUI/SettingsAudioMenu/SetAudOptions" unique_id=1844781099]
+layout_mode = 2
+mouse_default_cursor_shape = 10
+
+[node name="SetAudBackButton" type="Button" parent="TitleUI/SettingsAudioMenu/SetAudOptions" unique_id=469680930]
+layout_mode = 2
+mouse_default_cursor_shape = 2
+text = "button_back"
+
+[node name="SettingsInputMenu" type="CanvasLayer" parent="TitleUI" unique_id=2053078855]
+visible = false
+
+[node name="SetInpOptions" type="VBoxContainer" parent="TitleUI/SettingsInputMenu" unique_id=796840439]
+custom_minimum_size = Vector2(200, 0)
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -59.0
+offset_top = -41.0
+offset_right = 59.0
+offset_bottom = 41.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="RumbLabel" type="Label" parent="TitleUI/SettingsInputMenu/SetInpOptions" unique_id=2120777567]
+layout_mode = 2
+text = "set_input_rumble"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="RumbButton" type="OptionButton" parent="TitleUI/SettingsInputMenu/SetInpOptions" unique_id=125846012]
+layout_mode = 2
+mouse_default_cursor_shape = 2
+item_count = 4
+popup/item_0/text = "set_input_rumble_none"
+popup/item_0/id = 3
+popup/item_1/text = "set_input_rumble_weak"
+popup/item_1/id = 0
+popup/item_2/text = "set_input_rumble_medium"
+popup/item_2/id = 1
+popup/item_3/text = "set_input_rumble_strong"
+popup/item_3/id = 2
+
+[node name="SetInpBackButton" type="Button" parent="TitleUI/SettingsInputMenu/SetInpOptions" unique_id=1400581001]
+layout_mode = 2
+mouse_default_cursor_shape = 2
+text = "button_back"
+
+[connection signal="pressed" from="TitleUI/TitleMenu/TitleOptions/SetButton" to="." method="_on_set_button_pressed"]
+[connection signal="pressed" from="TitleUI/TitleMenu/TitleOptions/ExitButton" to="." method="_on_exit_button_pressed"]
+[connection signal="pressed" from="TitleUI/TitleMenu/EraseSuccess/EraseSuccessOptions/EraseSuccessYesNo/EraseSuccessOkButton" to="." method="_on_erase_success_ok_button_pressed"]
+[connection signal="pressed" from="TitleUI/SettingsMenu/SetOptions/GenButton" to="." method="_on_gen_button_pressed"]
+[connection signal="pressed" from="TitleUI/SettingsMenu/SetOptions/VidButton" to="." method="_on_vid_button_pressed"]
+[connection signal="pressed" from="TitleUI/SettingsMenu/SetOptions/AudButton" to="." method="_on_aud_button_pressed"]
+[connection signal="pressed" from="TitleUI/SettingsMenu/SetOptions/InpButton" to="." method="_on_inp_button_pressed"]
+[connection signal="pressed" from="TitleUI/SettingsMenu/SetOptions/FeedButton" to="." method="_on_feed_button_pressed"]
+[connection signal="pressed" from="TitleUI/SettingsMenu/SetOptions/SetBackButton" to="." method="_on_set_back_button_pressed"]
+[connection signal="pressed" from="TitleUI/SettingsGeneralMenu/SetGenOptions/GameDirButton" to="." method="_on_game_dir_button_pressed"]
+[connection signal="item_selected" from="TitleUI/SettingsGeneralMenu/SetGenOptions/LangButton" to="." method="_on_lang_button_item_selected"]
+[connection signal="pressed" from="TitleUI/SettingsGeneralMenu/SetGenOptions/EraseSetButton" to="." method="_on_erase_set_button_pressed"]
+[connection signal="pressed" from="TitleUI/SettingsGeneralMenu/SetGenOptions/SetGenBackButton" to="." method="_on_set_gen_back_button_pressed"]
+[connection signal="pressed" from="TitleUI/SettingsGeneralMenu/EraseConfirm/EraseConfirmOptions/EraseConfirmYesNo/EraseYesButton" to="." method="_on_erase_yes_button_pressed"]
+[connection signal="pressed" from="TitleUI/SettingsGeneralMenu/EraseConfirm/EraseConfirmOptions/EraseConfirmYesNo/EraseNoButton" to="." method="_on_erase_no_button_pressed"]
+[connection signal="drag_ended" from="TitleUI/SettingsVideoMenu/SetVidOptions/FpsSlider" to="." method="_on_fps_slider_drag_ended"]
+[connection signal="pressed" from="TitleUI/SettingsVideoMenu/SetVidOptions/SetVidApplyButton" to="." method="_on_set_vid_apply_button_pressed"]
+[connection signal="pressed" from="TitleUI/SettingsVideoMenu/SetVidOptions/SetVidBackButton" to="." method="_on_set_vid_back_button_pressed"]
+[connection signal="drag_ended" from="TitleUI/SettingsAudioMenu/SetAudOptions/VolSlider" to="." method="_on_vol_slider_drag_ended"]
+[connection signal="drag_ended" from="TitleUI/SettingsAudioMenu/SetAudOptions/BgmVolSlider" to="." method="_on_bgm_vol_slider_drag_ended"]
+[connection signal="drag_ended" from="TitleUI/SettingsAudioMenu/SetAudOptions/SfxVolSlider" to="." method="_on_sfx_vol_slider_drag_ended"]
+[connection signal="pressed" from="TitleUI/SettingsAudioMenu/SetAudOptions/SetAudBackButton" to="." method="_on_set_aud_back_button_pressed"]
+[connection signal="item_selected" from="TitleUI/SettingsInputMenu/SetInpOptions/RumbButton" to="." method="_on_rumb_button_item_selected"]
+[connection signal="pressed" from="TitleUI/SettingsInputMenu/SetInpOptions/SetInpBackButton" to="." method="_on_set_inp_back_button_pressed"]
