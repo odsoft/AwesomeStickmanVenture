@@ -184,7 +184,7 @@ text = "settings_feedback"
 [node name="SetBackButton" type="Button" parent="TitleUI/SettingsMenu/SetOptions" unique_id=1410870203]
 layout_mode = 2
 mouse_default_cursor_shape = 2
-text = "button_back"
+text = "button_done"
 
 [node name="BuildLabel" type="Label" parent="TitleUI/SettingsMenu" unique_id=1527238115]
 anchors_preset = 2
@@ -241,7 +241,7 @@ text = "set_general_erase"
 [node name="SetGenBackButton" type="Button" parent="TitleUI/SettingsGeneralMenu/SetGenOptions" unique_id=1749666142]
 layout_mode = 2
 mouse_default_cursor_shape = 2
-text = "button_back"
+text = "button_done"
 
 [node name="EraseConfirm" type="CanvasLayer" parent="TitleUI/SettingsGeneralMenu" unique_id=60388095]
 layer = 95
@@ -376,12 +376,12 @@ popup/item_2/id = 2
 [node name="SetVidApplyButton" type="Button" parent="TitleUI/SettingsVideoMenu/SetVidOptions" unique_id=1365383900]
 layout_mode = 2
 mouse_default_cursor_shape = 2
-text = "button_apply"
+text = "button_done"
 
 [node name="SetVidBackButton" type="Button" parent="TitleUI/SettingsVideoMenu/SetVidOptions" unique_id=682158955]
 layout_mode = 2
 mouse_default_cursor_shape = 2
-text = "button_back"
+text = "button_cancel"
 
 [node name="SettingsAudioMenu" type="CanvasLayer" parent="TitleUI" unique_id=937797145]
 visible = false
@@ -433,7 +433,7 @@ mouse_default_cursor_shape = 10
 [node name="SetAudBackButton" type="Button" parent="TitleUI/SettingsAudioMenu/SetAudOptions" unique_id=469680930]
 layout_mode = 2
 mouse_default_cursor_shape = 2
-text = "button_back"
+text = "button_done"
 
 [node name="SettingsInputMenu" type="CanvasLayer" parent="TitleUI" unique_id=2053078855]
 visible = false
@@ -474,7 +474,7 @@ popup/item_3/id = 2
 [node name="SetInpBackButton" type="Button" parent="TitleUI/SettingsInputMenu/SetInpOptions" unique_id=1400581001]
 layout_mode = 2
 mouse_default_cursor_shape = 2
-text = "button_back"
+text = "button_done"
 
 [connection signal="pressed" from="TitleUI/TitleMenu/TitleOptions/SetButton" to="." method="_on_set_button_pressed"]
 [connection signal="pressed" from="TitleUI/TitleMenu/TitleOptions/ExitButton" to="." method="_on_exit_button_pressed"]
