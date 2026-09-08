@@ -155,7 +155,7 @@ func _on_rumb_button_item_selected(index: int) -> void:
 
 
 func _on_feed_button_pressed() -> void:
-	OS.shell_open("https://docs.google.com/forms/d/e/1FAIpQLSfTzPiaOzqyHTfrtsuuuVle08zlEVb0v1vwC6KB1LbQ0bfUhw/viewform?usp=publish-editor")
+	OS.shell_open("https://github.com/odsoft/AwesomeStickmanVenture")
 
 # unused
 # func _on_title_bgm_button_toggled(toggled_on: bool) -> void:
