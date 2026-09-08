@@ -151,6 +151,7 @@ func apply_settings() -> void:
 			DisplayServer.window_set_size(resolution)
 			DisplayServer.window_set_min_size(resolution)
 			DisplayServer.window_set_max_size(resolution)
+			DisplayServer.window_set_flag(DisplayServer.WINDOW_FLAG_MAXIMIZE_DISABLED, true)
 		1:
 			DisplayServer.window_set_mode(DisplayServer.WINDOW_MODE_WINDOWED)
 			DisplayServer.window_set_flag(DisplayServer.WINDOW_FLAG_BORDERLESS, true)
