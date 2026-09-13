@@ -107,8 +107,8 @@ func _on_gen_button_pressed() -> void:
 	$TitleUI/SettingsMenu.visible = false
 	$TitleUI/SettingsGeneralMenu.visible = true
 	$TitleUI/SettingsGeneralMenu/SetGenOptions/LangButton.clear()
-	for i in Globals.LANGUAGES:
-		$TitleUI/SettingsGeneralMenu/SetGenOptions/LangButton.add_item("%s (%s)" % [tr("lang_"+i), Globals.LANGUAGES_FULL[Globals.LANGUAGES.find(i)]])
+	for i in len(Globals.LANGUAGES):
+		$TitleUI/SettingsGeneralMenu/SetGenOptions/LangButton.add_item(Globals.LANGUAGES[i])
 	$TitleUI/SettingsGeneralMenu/SetGenOptions/LangButton.selected = Globals.current_settings["general"]["language"]
 
 func _on_game_dir_button_pressed() -> void:
@@ -118,8 +118,8 @@ func _on_lang_button_item_selected(index: int) -> void:
 	Globals.current_settings["general"]["language"] = index
 	Globals.apply_settings()
 	$TitleUI/SettingsGeneralMenu/SetGenOptions/LangButton.clear()
-	for i in Globals.LANGUAGES:
-		$TitleUI/SettingsGeneralMenu/SetGenOptions/LangButton.add_item("%s (%s)" % [tr("lang_"+i), Globals.LANGUAGES_FULL[Globals.LANGUAGES.find(i)]])
+	for i in len(Globals.LANGUAGES):
+		$TitleUI/SettingsGeneralMenu/SetGenOptions/LangButton.add_item(Globals.LANGUAGES[i])
 	$TitleUI/SettingsGeneralMenu/SetGenOptions/LangButton.selected = Globals.current_settings["general"]["language"]
 	Globals.save_settings()
 
@@ -174,12 +174,7 @@ func _on_erase_yes_button_pressed() -> void:
 	Globals.save_settings()
 	$TitleUI/SettingsGeneralMenu.visible = false
 	$TitleUI/TitleMenu.visible = true
-	$TitleUI/TitleMenu/EraseSuccess.visible = true
 
 
 func _on_erase_set_button_pressed() -> void:
 	$TitleUI/SettingsGeneralMenu/EraseConfirm.visible = true
-
-
-func _on_erase_success_ok_button_pressed() -> void:
-	$TitleUI/TitleMenu/EraseSuccess.visible = false

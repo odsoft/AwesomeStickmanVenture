@@ -59,53 +59,6 @@ layout_mode = 2
 mouse_default_cursor_shape = 2
 text = "title_root_exit"
 
-[node name="EraseSuccess" type="CanvasLayer" parent="TitleUI/TitleMenu" unique_id=1539039571]
-layer = 95
-visible = false
-
-[node name="EraseSuccessBackground" type="ColorRect" parent="TitleUI/TitleMenu/EraseSuccess" unique_id=1559392677]
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
-color = Color(0, 0, 0, 0.77254903)
-
-[node name="EraseSuccessOptions" type="VBoxContainer" parent="TitleUI/TitleMenu/EraseSuccess" unique_id=1390593764]
-anchors_preset = 8
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-offset_left = -20.0
-offset_top = -20.0
-offset_right = 20.0
-offset_bottom = 20.0
-grow_horizontal = 2
-grow_vertical = 2
-
-[node name="EraseSuccessLabelHead" type="Label" parent="TitleUI/TitleMenu/EraseSuccess/EraseSuccessOptions" unique_id=1093151]
-layout_mode = 2
-text = "confirm_complete"
-horizontal_alignment = 1
-vertical_alignment = 1
-
-[node name="EraseSuccessLabel" type="Label" parent="TitleUI/TitleMenu/EraseSuccess/EraseSuccessOptions" unique_id=608826539]
-layout_mode = 2
-text = "set_general_erase_success"
-horizontal_alignment = 1
-vertical_alignment = 1
-
-[node name="EraseSuccessYesNo" type="HBoxContainer" parent="TitleUI/TitleMenu/EraseSuccess/EraseSuccessOptions" unique_id=502999963]
-layout_mode = 2
-alignment = 1
-
-[node name="EraseSuccessOkButton" type="Button" parent="TitleUI/TitleMenu/EraseSuccess/EraseSuccessOptions/EraseSuccessYesNo" unique_id=1576046844]
-custom_minimum_size = Vector2(75, 0)
-layout_mode = 2
-mouse_default_cursor_shape = 2
-text = "button_ok"
-
 [node name="TextureRect" type="TextureRect" parent="TitleUI/TitleMenu" unique_id=56095694]
 anchors_preset = 8
 anchor_left = 0.5
@@ -231,11 +184,6 @@ mouse_default_cursor_shape = 2
 [node name="EraseSetButton" type="Button" parent="TitleUI/SettingsGeneralMenu/SetGenOptions" unique_id=1003360753]
 layout_mode = 2
 mouse_default_cursor_shape = 2
-theme_override_colors/font_color = Color(1, 0.18, 0.18, 1)
-theme_override_colors/font_focus_color = Color(1, 0.18, 0.18, 1)
-theme_override_colors/font_pressed_color = Color(1, 0.18, 0.18, 1)
-theme_override_colors/font_hover_color = Color(1, 0.18, 0.18, 1)
-theme_override_colors/font_hover_pressed_color = Color(1, 0.18, 0.18, 1)
 text = "set_general_erase"
 
 [node name="SetGenBackButton" type="Button" parent="TitleUI/SettingsGeneralMenu/SetGenOptions" unique_id=1749666142]
@@ -478,7 +426,6 @@ text = "button_done"
 
 [connection signal="pressed" from="TitleUI/TitleMenu/TitleOptions/SetButton" to="." method="_on_set_button_pressed"]
 [connection signal="pressed" from="TitleUI/TitleMenu/TitleOptions/ExitButton" to="." method="_on_exit_button_pressed"]
-[connection signal="pressed" from="TitleUI/TitleMenu/EraseSuccess/EraseSuccessOptions/EraseSuccessYesNo/EraseSuccessOkButton" to="." method="_on_erase_success_ok_button_pressed"]
 [connection signal="pressed" from="TitleUI/SettingsMenu/SetOptions/GenButton" to="." method="_on_gen_button_pressed"]
 [connection signal="pressed" from="TitleUI/SettingsMenu/SetOptions/VidButton" to="." method="_on_vid_button_pressed"]
 [connection signal="pressed" from="TitleUI/SettingsMenu/SetOptions/AudButton" to="." method="_on_aud_button_pressed"]

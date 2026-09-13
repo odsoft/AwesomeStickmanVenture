@@ -145,7 +145,7 @@ game_lands={
 
 [internationalization]
 
-locale/translations=PackedStringArray("res://translations.en.translation", "res://translations.pl.translation")
+locale/translations=PackedStringArray("res://translations.en.translation", "res://translations.pl.translation", "res://translations.de.translation")
 
 [rendering]
 

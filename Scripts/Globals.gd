@@ -7,8 +7,8 @@ static var islin = OS.has_feature("linux") or OS.has_feature("bsd")
 
 
 # define languages for indexing purposes
-const LANGUAGES = ["sys", "en", "pl"]
-const LANGUAGES_FULL = ["System", "English", "Polski"]
+const LANGUAGES = ["System", "English", "Polski", "Deutsch"]
+const LANGS = ["sys", "en", "pl", "de"]
 const RESOLUTIONS = ["854x480", "1280x720", "1920x1080"]
 const KEYBIND_ACTIONS = [
 	"menu_left",
@@ -41,7 +41,7 @@ func _notification(what: int) -> void:
 const DEFAULT_SETTINGS = {
 	# template for a new settings file
 	"general": {
-		"language": 0, # 0 - system, 1 - english, 2 - polish, 3 - german (future), 4 - spanish (future), 5 - french (future)
+		"language": 0, # 0 - system, 1 - english, 2 - polish, 3 - german
 	},
 	"video": {
 		"display": 0,  # 0 - windowed, 1 - borderless, 2 - fullscreen
@@ -70,7 +70,7 @@ const DEFAULT_SETTINGS = {
 const SETTINGS_ALLOWED = {
 	# allowed values for settings, for validation purposes; if an array has exactly two floats, it will be treated as a range
 	"general": {
-		"language": [0, 1],
+		"language": [0, 1, 2, 3],
 	},
 	"video": {
 		"display": [0, 1, 2],
@@ -170,7 +170,7 @@ func apply_settings() -> void:
 	if general["language"] == 0:
 		TranslationServer.set_locale(OS.get_locale())
 	else:
-		TranslationServer.set_locale(LANGUAGES[general["language"]])
+		TranslationServer.set_locale(LANGS[general["language"]])
 
 func initialize_settings() -> void:
 	print("[INFO] Initializing settings...")
