@@ -28,7 +28,102 @@ grow_vertical = 2
 color = Color(0, 0, 0, 1)
 script = ExtResource("2_4gxqj")
 
+[node name="UserMenu" type="CanvasLayer" parent="TitleUI" unique_id=1043499748]
+
+[node name="ErrorPopup" type="Popup" parent="TitleUI/UserMenu" unique_id=366624211]
+oversampling_override = 1.0
+title = "ASV"
+initial_position = 1
+size = Vector2i(286, 100)
+
+[node name="contents" type="VBoxContainer" parent="TitleUI/UserMenu/ErrorPopup" unique_id=1689829781]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -51.5
+offset_top = -25.0
+offset_right = 51.5
+offset_bottom = 25.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="ErrorTitle" type="Label" parent="TitleUI/UserMenu/ErrorPopup/contents" unique_id=1807311983]
+layout_mode = 2
+text = "error_title"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="ErrorLabel" type="Label" parent="TitleUI/UserMenu/ErrorPopup/contents" unique_id=1775117311]
+layout_mode = 2
+text = "error_title"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="UserErrorCancel" type="Button" parent="TitleUI/UserMenu/ErrorPopup/contents" unique_id=1214483723]
+layout_mode = 2
+mouse_default_cursor_shape = 2
+text = "button_ok"
+
+[node name="UserOptions" type="VBoxContainer" parent="TitleUI/UserMenu" unique_id=374388851]
+custom_minimum_size = Vector2(200, 0)
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -124.0
+offset_top = -79.5
+offset_right = 124.0
+offset_bottom = 79.5
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="WelcomeLabel" type="Label" parent="TitleUI/UserMenu/UserOptions" unique_id=1387701492]
+layout_mode = 2
+text = "users_welcome"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="UsersLabel" type="Label" parent="TitleUI/UserMenu/UserOptions" unique_id=904289196]
+layout_mode = 2
+text = "users_select"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="UsersMenu" type="OptionButton" parent="TitleUI/UserMenu/UserOptions" unique_id=1412069397]
+layout_mode = 2
+mouse_default_cursor_shape = 2
+
+[node name="CreateBox" type="HBoxContainer" parent="TitleUI/UserMenu/UserOptions" unique_id=91895545]
+layout_mode = 2
+
+[node name="CreateUser" type="LineEdit" parent="TitleUI/UserMenu/UserOptions/CreateBox" unique_id=558600068]
+custom_minimum_size = Vector2(200, 0)
+layout_mode = 2
+placeholder_text = "users_new"
+expand_to_text_length = true
+context_menu_enabled = false
+emoji_menu_enabled = false
+
+[node name="CreateButton" type="Button" parent="TitleUI/UserMenu/UserOptions/CreateBox" unique_id=820141711]
+layout_mode = 2
+mouse_default_cursor_shape = 2
+text = "users_create"
+
+[node name="SelUserButton" type="Button" parent="TitleUI/UserMenu/UserOptions" unique_id=178199955]
+layout_mode = 2
+mouse_default_cursor_shape = 2
+text = "button_done"
+
+[node name="ExitButton" type="Button" parent="TitleUI/UserMenu/UserOptions" unique_id=1012867615]
+layout_mode = 2
+mouse_default_cursor_shape = 2
+text = "title_root_exit"
+
 [node name="TitleMenu" type="CanvasLayer" parent="TitleUI" unique_id=756084863]
+visible = false
 
 [node name="TitleOptions" type="VBoxContainer" parent="TitleUI/TitleMenu" unique_id=1093471804]
 custom_minimum_size = Vector2(200, 0)
@@ -424,6 +519,10 @@ layout_mode = 2
 mouse_default_cursor_shape = 2
 text = "button_done"
 
+[connection signal="pressed" from="TitleUI/UserMenu/ErrorPopup/contents/UserErrorCancel" to="." method="_on_user_error_cancel_pressed"]
+[connection signal="pressed" from="TitleUI/UserMenu/UserOptions/CreateBox/CreateButton" to="." method="_on_create_button_pressed"]
+[connection signal="pressed" from="TitleUI/UserMenu/UserOptions/SelUserButton" to="." method="_on_sel_user_button_pressed"]
+[connection signal="pressed" from="TitleUI/UserMenu/UserOptions/ExitButton" to="." method="_on_exit_button_pressed"]
 [connection signal="pressed" from="TitleUI/TitleMenu/TitleOptions/SetButton" to="." method="_on_set_button_pressed"]
 [connection signal="pressed" from="TitleUI/TitleMenu/TitleOptions/ExitButton" to="." method="_on_exit_button_pressed"]
 [connection signal="pressed" from="TitleUI/SettingsMenu/SetOptions/GenButton" to="." method="_on_gen_button_pressed"]

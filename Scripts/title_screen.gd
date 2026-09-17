@@ -5,6 +5,15 @@ func _ready() -> void:
 	MusicPlayer.play_music("title")
 	Fade.fade_in()
 	Globals.can_exit = true
+	var users = DirAccess.open(Globals.datapath.path_join("users"))
+	users.list_dir_begin()
+	var item_name := users.get_next()
+	while item_name != "":
+		if users.current_is_dir():
+			$TitleUI/UserMenu/UserOptions/UsersMenu.add_item(item_name)
+		item_name = users.get_next()
+	users.list_dir_end()
+	$TitleUI/UserMenu/UserOptions/UsersMenu.selected = 0
 
 func _on_exit_button_pressed() -> void:
 	Globals.exit_game()
@@ -178,3 +187,47 @@ func _on_erase_yes_button_pressed() -> void:
 
 func _on_erase_set_button_pressed() -> void:
 	$TitleUI/SettingsGeneralMenu/EraseConfirm.visible = true
+
+
+func _on_user_error_cancel_pressed() -> void:
+	$TitleUI/UserMenu/ErrorPopup.visible = false
+
+
+func _on_sel_user_button_pressed() -> void:
+	if $TitleUI/UserMenu/UserOptions/UsersMenu.item_count < 1:
+		$TitleUI/UserMenu/ErrorPopup/contents/ErrorLabel.text = tr("users_error_none")
+		$TitleUI/UserMenu/ErrorPopup.visible = true
+	elif $TitleUI/UserMenu/UserOptions/UsersMenu.get_item_text($TitleUI/UserMenu/UserOptions/UsersMenu.selected) == "":
+		$TitleUI/UserMenu/ErrorPopup/contents/ErrorLabel.text = tr("users_error_none")
+		$TitleUI/UserMenu/ErrorPopup.visible = true
+	elif !DirAccess.dir_exists_absolute(Globals.datapath.path_join("users").path_join($TitleUI/UserMenu/UserOptions/UsersMenu.get_item_text($TitleUI/UserMenu/UserOptions/UsersMenu.selected))):
+		$TitleUI/UserMenu/ErrorPopup/contents/ErrorLabel.text = tr("users_error_noexist")
+		$TitleUI/UserMenu/ErrorPopup.visible = true
+	else:
+		Globals.user = $TitleUI/UserMenu/UserOptions/UsersMenu.get_item_text($TitleUI/UserMenu/UserOptions/UsersMenu.selected)
+		$TitleUI/UserMenu.visible = false
+		$TitleUI/TitleMenu.visible = true
+
+
+func _on_create_button_pressed() -> void:
+	if $TitleUI/UserMenu/UserOptions/CreateBox/CreateUser.text != "":
+		var txt = $TitleUI/UserMenu/UserOptions/CreateBox/CreateUser.text
+		$TitleUI/UserMenu/UserOptions/UsersMenu.clear()
+		var users = DirAccess.open(Globals.datapath.path_join("users"))
+		if FileAccess.file_exists(Globals.datapath.path_join("users").path_join($TitleUI/UserMenu/UserOptions/CreateBox/CreateUser.text)) or DirAccess.dir_exists_absolute(Globals.datapath.path_join("users").path_join($TitleUI/UserMenu/UserOptions/CreateBox/CreateUser.text)):
+			$TitleUI/UserMenu/ErrorPopup/contents/ErrorLabel.text = tr("users_error_exists")
+			$TitleUI/UserMenu/ErrorPopup.visible = true
+		else:
+			users.make_dir($TitleUI/UserMenu/UserOptions/CreateBox/CreateUser.text)
+			$TitleUI/UserMenu/UserOptions/CreateBox/CreateUser.text = ""
+		users.list_dir_begin()
+		var item_name := users.get_next()
+		while item_name != "":
+			if users.current_is_dir():
+				$TitleUI/UserMenu/UserOptions/UsersMenu.add_item(item_name)
+			item_name = users.get_next()
+		users.list_dir_end()
+		for i in range($TitleUI/UserMenu/UserOptions/UsersMenu.item_count):
+			if $TitleUI/UserMenu/UserOptions/UsersMenu.get_item_text(i) == txt:
+				$TitleUI/UserMenu/UserOptions/UsersMenu.selected = i
+				break

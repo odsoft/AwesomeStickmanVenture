@@ -2,7 +2,7 @@ extends Control
 
 func _ready() -> void:
 	print("Awesome Stickman Venture")
-	print(tr("log_made_by"))
+	print("(c) OdSoft")
 	await get_tree().create_timer(0.5).timeout
 	$CanvasLayer/PresentsLabel.visible = true
 	await get_tree().create_timer(1.5).timeout

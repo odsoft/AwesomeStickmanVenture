@@ -54,7 +54,6 @@ const DEFAULT_SETTINGS = {
 		"master_volume": 1.0,
 		"sfx_volume": 1.0,
 		"bgm_volume": 1.0,
-		# "title_bgm": true
 	},
 	"input": {
 		"rumble": 2,  # 0 - none, 1 - weak, 2 - medium, 3 - strong
@@ -104,24 +103,25 @@ var user = "" # current user
 
 func load_dirs() -> void:
 	print("[INFO] Loading directories...")
-	var basepath: String = ""
 	if iswin:
-		basepath = OS.get_environment("APPDATA").path_join("odsoft")
+		datapath = OS.get_environment("APPDATA").path_join("odsoft").path_join("ASV")
 	elif ismac:
-		basepath = OS.get_environment("HOME").path_join("Library").path_join("Application Support").path_join("odsoft")
+		datapath = OS.get_environment("HOME").path_join("Library").path_join("Application Support").path_join("odsoft").path_join("ASV")
 	elif islin:
-		basepath = OS.get_environment("XDG_CONFIG_HOME").path_join("odsoft")
 		if OS.get_environment("XDG_CONFIG_HOME") == "":
 			var home = OS.get_environment("HOME")
 			if home != "":
-				basepath = home.path_join(".config").path_join("odsoft")
+				datapath = home.path_join(".config").path_join("odsoft").path_join("ASV")
+			else:
+				datapath = OS.get_user_data_dir().path_join("ASV")
+		else:
+			datapath = OS.get_environment("XDG_CONFIG_HOME").path_join("odsoft").path_join("ASV")
 	else:
-		basepath = OS.get_user_data_dir()
-	datapath = basepath.path_join("ASV")
+		datapath = OS.get_user_data_dir().path_join("ASV")
 	if not DirAccess.dir_exists_absolute(datapath):
 		DirAccess.make_dir_recursive_absolute(datapath)
-	if not DirAccess.dir_exists_absolute(datapath.path_join("saves")):
-		DirAccess.make_dir_absolute(datapath.path_join("saves"))
+	if not DirAccess.dir_exists_absolute(datapath.path_join("users")):
+		DirAccess.make_dir_absolute(datapath.path_join("users"))
 
 func exit_game() -> void:
 	if can_exit:
