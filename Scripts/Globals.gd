@@ -100,6 +100,7 @@ const SETTINGS_ALLOWED = {
 var datapath = "" # path for game data directory
 var current_settings = {} # settings loaded into memory
 var current_save_data = {} # save data loaded into memory
+var user = "" # current user
 
 func load_dirs() -> void:
 	print("[INFO] Loading directories...")

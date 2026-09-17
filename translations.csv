@@ -65,4 +65,5 @@ set_access_cutscenered,"Skip optional cutscenes","Pomiń opcjonalne przerywniki"
 # --- USER SCREEN ---,,,
 users_welcome,"Welcome to ASV!","Witamy w ASV!","Willkommen bei ASV!"
 users_select,"Select a user...","Wybierz użytkownika...","Benutzer auswählen..."
-users_create,"Create a user...","Utwórz użytkownika...","Benutzer erstellen..."
+users_new,"New user...","Nowy użytkownik...","Neuer Benutzer..."
+users_create,"Create","Utwórz","Erstellen"
