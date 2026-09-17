@@ -1,5 +1,5 @@
 key,en,pl,de
-# --- BUTTONS & SWITCHES ---
+# --- BUTTONS & SWITCHES ---,,,
 button_yes,"Yes","Tak","Ja"
 button_no,"No","Nie","Nein"
 button_yes_fancy,"Sure","Jasne","Sicher"
@@ -11,14 +11,16 @@ switch_on,"ON","WŁ","EIN"
 switch_off,"OFF","WYŁ","AUS"
 ask_sure,"Are you sure?","Czy na pewno?","Bist du sicher?"
 ask_erase,"This can't be undone.","Nie da się tego cofnąć.","Nicht rückgängig machbar."
-# --- SPLASH SCREEN ---
+# --- SPLASH SCREEN ---,,,
 log_made_by,"Made by OdSoft","Gra stworzona przez OdSoft"
 splash_presents,"presents...","przedstawia...","präsentiert..."
-# --- TITLE SCREEN ---
-title_root_play,"Play","Graj","Spielen"
+# --- TITLE SCREEN ---,,,
+title_root_load,"Load game","Załaduj grę","Spiel laden"
+title_root_new,"New game","Nowa gra","Neues Spiel"
+title_root_switch,"Switch user","Zmień użytkownika","Benutzer wechseln"
 title_root_set,"Settings","Ustawienia","Einstellungen"
 title_root_exit,"Exit game","Wyjdź z gry","Spiel beenden"
-# --- SETTINGS ---
+# --- SETTINGS ---,,,
 settings_general,"General","Ogólne","Allgemein"
 settings_video,"Video","Obraz","Bild"
 settings_audio,"Audio","Dźwięk","Audio"
@@ -27,12 +29,12 @@ settings_access,"Accessibility","Ułatwienia dostępu"
 settings_credits,"Credits & Attributions","Twórcy i atrybucje"
 settings_feedback,"Open GitHub","Otwórz GitHuba","GitHub öffnen"
 settings_contact,"Get in touch","Skontaktuj się","Kontakt aufnehmen"
-# --- GENERAL SETTINGS ---
+# --- GENERAL SETTINGS ---,,,
 set_general_opendir,"Open game directory","Otwórz katalog gry","Spielverzeichnis öffnen"
 set_general_lang,"Language","Język","Sprache"
 set_general_erase,"Erase settings","Wymaż ustawienia","Einstellungen löschen"
 set_general_eraseall,"Erase everything","Wymaż wszystko","Alles löschen"
-# --- VIDEO SETTINGS ---
+# --- VIDEO SETTINGS ---,,,
 set_video_gpu,"Graphics card: %s","Karta graficzna: %s","Grafikkarte: %s"
 set_video_gpu_noid,"Couldn't identify","Nie rozpoznano","Nicht erkannt"
 set_video_resolution,"Resolution","Rozdzielczość","Auflösung"
@@ -44,28 +46,23 @@ set_video_dispmode_fullscreen,"Fullscreen","Pełny ekran","Vollbild"
 set_video_dispmode_borderless,"Borderless","Bez ramek","Randlos"
 set_video_dispmode_windowed,"Windowed","W oknie","Fenstermodus"
 set_video_showfps,"Show FPS","Pokaż FPS","FPS anzeigen"
-# --- AUDIO SETTINGS ---
+# --- AUDIO SETTINGS ---,,,
 set_audio_out,"Audio output","Wyjście audio","Audioausgabe"
 set_audio_volume,"Volume: %d%%","Głośność: %d%%","Lautstärke: %d%%"
 set_audio_bgm_volume,"BGM Volume: %d%%","Głośność muzyki: %d%%","Musik-Lautstärke: %d%%"
 set_audio_sfx_volume,"SFX Volume: %d%%","Głośność efektów: %d%%","SFX-Lautstärke: %d%%"
-# --- INPUT SETTINGS ---
-set_input_rumble,"Rumble","Wibracje"
-set_input_rumble_none,"None","Brak"
-set_input_rumble_weak,"Weak","Słabe"
-set_input_rumble_medium,"Medium","Średnie"
-set_input_rumble_strong,"Strong","Silne"
-# --- ACCESSIBILITY SETTINGS ---
+# --- INPUT SETTINGS ---,,,
+set_input_rumble,"Rumble","Wibracje","Vibration"
+set_input_rumble_none,"None","Brak","Aus"
+set_input_rumble_weak,"Weak","Słabe","Schwach"
+set_input_rumble_medium,"Medium","Średnie","Mittel"
+set_input_rumble_strong,"Strong","Silne","Stark"
+# --- ACCESSIBILITY SETTINGS ---,,,
 set_access_shakeint,"Shake intensity","Intensywność wstrząsów"
 set_access_flashred,"Reduce flashes","Ogranicz błyski"
 set_access_motionred,"Reduce motion","Ogranicz ruchy"
 set_access_cutscenered,"Skip optional cutscenes","Pomiń opcjonalne przerywniki"
-# --- PLAY GAME SCREEN ---
-play_file,select,"Select save file:","Wybierz plik zapisu:"
-play_file,"File %s: %s","Plik %s: %s"
-play_file_load,"Load","Załaduj","Laden"
-play_file_clone,"Clone","Sklonuj","Klonen"
-play_file_erase,"Erase","Wymaż","Löschen"
-play_file_clone_target,"Clone file %s to where?","Gdzie sklonować plik %s?"
-play_file_clone_overwrite,"File %s already exists. Overwrite it?","Plik %s już istnieje. Nadpisać go?"
-play_file_erase_ask,"All progress in file %s will disappear for good.","Cały postęp w pliku %s zniknie na dobre."
+# --- USER SCREEN ---,,,
+users_welcome,"Welcome to ASV!","Witamy w ASV!","Willkommen bei ASV!"
+users_select,"Select a user...","Wybierz użytkownika...","Benutzer auswählen..."
+users_create,"Create a user...","Utwórz użytkownika...","Benutzer erstellen..."
