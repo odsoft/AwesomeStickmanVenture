@@ -5,6 +5,7 @@ func _ready() -> void:
 	MusicPlayer.play_music("title")
 	Fade.fade_in()
 	Globals.can_exit = true
+	$TitleUI/UserMenu/UserOptions/UsersMenu.clear()
 	var users = DirAccess.open(Globals.datapath.path_join("users"))
 	users.list_dir_begin()
 	var item_name := users.get_next()
@@ -13,7 +14,18 @@ func _ready() -> void:
 			$TitleUI/UserMenu/UserOptions/UsersMenu.add_item(item_name)
 		item_name = users.get_next()
 	users.list_dir_end()
-	$TitleUI/UserMenu/UserOptions/UsersMenu.selected = 0
+	if FileAccess.file_exists(Globals.datapath.path_join("lastuser")):
+		var f = FileAccess.open(Globals.datapath.path_join("lastuser"), FileAccess.READ)
+		var u = f.get_line()
+		if DirAccess.dir_exists_absolute(Globals.datapath.path_join("users").path_join(u)):
+			for i in range($TitleUI/UserMenu/UserOptions/UsersMenu.item_count):
+				if $TitleUI/UserMenu/UserOptions/UsersMenu.get_item_text(i) == u:
+					$TitleUI/UserMenu/UserOptions/UsersMenu.selected = i
+					break
+		else:
+			$TitleUI/UserMenu/UserOptions/UsersMenu.selected = 0
+	else:
+		$TitleUI/UserMenu/UserOptions/UsersMenu.selected = 0
 
 func _on_exit_button_pressed() -> void:
 	Globals.exit_game()
@@ -204,7 +216,10 @@ func _on_sel_user_button_pressed() -> void:
 		$TitleUI/UserMenu/ErrorPopup/contents/ErrorLabel.text = tr("users_error_noexist")
 		$TitleUI/UserMenu/ErrorPopup.visible = true
 	else:
+		$TitleUI/UserMenu/UserOptions/CreateBox/CreateUser.text = ""
 		Globals.user = $TitleUI/UserMenu/UserOptions/UsersMenu.get_item_text($TitleUI/UserMenu/UserOptions/UsersMenu.selected)
+		var f = FileAccess.open(Globals.datapath.path_join("lastuser"),FileAccess.WRITE)
+		f.store_line(Globals.user)
 		$TitleUI/UserMenu.visible = false
 		$TitleUI/TitleMenu.visible = true
 
@@ -212,14 +227,15 @@ func _on_sel_user_button_pressed() -> void:
 func _on_create_button_pressed() -> void:
 	if $TitleUI/UserMenu/UserOptions/CreateBox/CreateUser.text != "":
 		var txt = $TitleUI/UserMenu/UserOptions/CreateBox/CreateUser.text
+		$TitleUI/UserMenu/UserOptions/CreateBox/CreateUser.text = ""
 		$TitleUI/UserMenu/UserOptions/UsersMenu.clear()
 		var users = DirAccess.open(Globals.datapath.path_join("users"))
-		if FileAccess.file_exists(Globals.datapath.path_join("users").path_join($TitleUI/UserMenu/UserOptions/CreateBox/CreateUser.text)) or DirAccess.dir_exists_absolute(Globals.datapath.path_join("users").path_join($TitleUI/UserMenu/UserOptions/CreateBox/CreateUser.text)):
+		if FileAccess.file_exists(Globals.datapath.path_join("users").path_join(txt)) or DirAccess.dir_exists_absolute(Globals.datapath.path_join("users").path_join(txt)):
 			$TitleUI/UserMenu/ErrorPopup/contents/ErrorLabel.text = tr("users_error_exists")
 			$TitleUI/UserMenu/ErrorPopup.visible = true
 		else:
-			users.make_dir($TitleUI/UserMenu/UserOptions/CreateBox/CreateUser.text)
-			$TitleUI/UserMenu/UserOptions/CreateBox/CreateUser.text = ""
+			users.make_dir(txt)
+			
 		users.list_dir_begin()
 		var item_name := users.get_next()
 		while item_name != "":
@@ -231,3 +247,30 @@ func _on_create_button_pressed() -> void:
 			if $TitleUI/UserMenu/UserOptions/UsersMenu.get_item_text(i) == txt:
 				$TitleUI/UserMenu/UserOptions/UsersMenu.selected = i
 				break
+
+
+func _on_switch_button_pressed() -> void:
+	Globals.user = ""
+	$TitleUI/UserMenu/UserOptions/UsersMenu.clear()
+	$TitleUI/TitleMenu.visible = false
+	$TitleUI/UserMenu.visible = true
+	var users = DirAccess.open(Globals.datapath.path_join("users"))
+	users.list_dir_begin()
+	var item_name := users.get_next()
+	while item_name != "":
+		if users.current_is_dir():
+			$TitleUI/UserMenu/UserOptions/UsersMenu.add_item(item_name)
+		item_name = users.get_next()
+	users.list_dir_end()
+	if FileAccess.file_exists(Globals.datapath.path_join("lastuser")):
+		var f = FileAccess.open(Globals.datapath.path_join("lastuser"), FileAccess.READ)
+		var u = f.get_line()
+		if DirAccess.dir_exists_absolute(Globals.datapath.path_join("users").path_join(u)):
+			for i in range($TitleUI/UserMenu/UserOptions/UsersMenu.item_count):
+				if $TitleUI/UserMenu/UserOptions/UsersMenu.get_item_text(i) == u:
+					$TitleUI/UserMenu/UserOptions/UsersMenu.selected = i
+					break
+		else:
+			$TitleUI/UserMenu/UserOptions/UsersMenu.selected = 0
+	else:
+		$TitleUI/UserMenu/UserOptions/UsersMenu.selected = 0

@@ -139,10 +139,22 @@ offset_bottom = 189.3407
 grow_horizontal = 2
 grow_vertical = 2
 
-[node name="PlayButton" type="Button" parent="TitleUI/TitleMenu/TitleOptions" unique_id=1310890732]
+[node name="LoadButton" type="Button" parent="TitleUI/TitleMenu/TitleOptions" unique_id=1310890732]
+layout_mode = 2
+mouse_default_cursor_shape = 8
+disabled = true
+text = "title_root_load"
+
+[node name="NewButton" type="Button" parent="TitleUI/TitleMenu/TitleOptions" unique_id=689396934]
+layout_mode = 2
+mouse_default_cursor_shape = 8
+disabled = true
+text = "title_root_new"
+
+[node name="SwitchButton" type="Button" parent="TitleUI/TitleMenu/TitleOptions" unique_id=341485903]
 layout_mode = 2
 mouse_default_cursor_shape = 2
-text = "title_root_play"
+text = "title_root_switch"
 
 [node name="SetButton" type="Button" parent="TitleUI/TitleMenu/TitleOptions" unique_id=456531742]
 layout_mode = 2
@@ -390,6 +402,7 @@ horizontal_alignment = 1
 vertical_alignment = 1
 
 [node name="FpsSlider" type="HSlider" parent="TitleUI/SettingsVideoMenu/SetVidOptions" unique_id=16486463]
+custom_minimum_size = Vector2(275, 0)
 layout_mode = 2
 mouse_default_cursor_shape = 10
 max_value = 30.0
@@ -523,6 +536,7 @@ text = "button_done"
 [connection signal="pressed" from="TitleUI/UserMenu/UserOptions/CreateBox/CreateButton" to="." method="_on_create_button_pressed"]
 [connection signal="pressed" from="TitleUI/UserMenu/UserOptions/SelUserButton" to="." method="_on_sel_user_button_pressed"]
 [connection signal="pressed" from="TitleUI/UserMenu/UserOptions/ExitButton" to="." method="_on_exit_button_pressed"]
+[connection signal="pressed" from="TitleUI/TitleMenu/TitleOptions/SwitchButton" to="." method="_on_switch_button_pressed"]
 [connection signal="pressed" from="TitleUI/TitleMenu/TitleOptions/SetButton" to="." method="_on_set_button_pressed"]
 [connection signal="pressed" from="TitleUI/TitleMenu/TitleOptions/ExitButton" to="." method="_on_exit_button_pressed"]
 [connection signal="pressed" from="TitleUI/SettingsMenu/SetOptions/GenButton" to="." method="_on_gen_button_pressed"]
