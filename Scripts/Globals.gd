@@ -7,28 +7,9 @@ static var islin = OS.has_feature("linux") or OS.has_feature("bsd")
 
 
 # define languages for indexing purposes
-const LANGUAGES = ["System", "English", "Polski", "Deutsch"]
-const LANGS = ["sys", "en", "pl", "de"]
+const LANGUAGES = ["System", "English", "Polski", "Deutsch", "Osh zang jeng"]
+const LANGS = ["sys", "en", "pl", "de", "ozh"]
 const RESOLUTIONS = ["854x480", "1280x720", "1920x1080"]
-const KEYBIND_ACTIONS = [
-	"menu_left",
-	"menu_right",
-	"menu_up",
-	"menu_down",
-	"menu_accept",
-	"menu_back",
-	"game_pause",
-	"game_jump",
-	"game_action",
-	"game_alt_action",
-	"game_run",
-	"game_crouch",
-	"game_left",
-	"game_right",
-	"game_up",
-	"game_down",
-    "game_lands"
-]
 
 func _notification(what: int) -> void:
 	# Check if the notification is a window close/quit request
