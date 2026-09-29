@@ -274,3 +274,7 @@ func _on_switch_button_pressed() -> void:
 			$TitleUI/UserMenu/UserOptions/UsersMenu.selected = 0
 	else:
 		$TitleUI/UserMenu/UserOptions/UsersMenu.selected = 0
+
+
+func _on_contact_button_pressed() -> void:
+	OS.shell_open("mailto:odsoftdev@pm.me")

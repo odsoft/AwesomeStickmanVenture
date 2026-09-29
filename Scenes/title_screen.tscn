@@ -241,6 +241,11 @@ layout_mode = 2
 mouse_default_cursor_shape = 2
 text = "settings_feedback"
 
+[node name="ContactButton" type="Button" parent="TitleUI/SettingsMenu/SetOptions" unique_id=958523882]
+layout_mode = 2
+mouse_default_cursor_shape = 2
+text = "settings_contact"
+
 [node name="SetBackButton" type="Button" parent="TitleUI/SettingsMenu/SetOptions" unique_id=1410870203]
 layout_mode = 2
 mouse_default_cursor_shape = 2
@@ -544,6 +549,7 @@ text = "button_done"
 [connection signal="pressed" from="TitleUI/SettingsMenu/SetOptions/AudButton" to="." method="_on_aud_button_pressed"]
 [connection signal="pressed" from="TitleUI/SettingsMenu/SetOptions/InpButton" to="." method="_on_inp_button_pressed"]
 [connection signal="pressed" from="TitleUI/SettingsMenu/SetOptions/FeedButton" to="." method="_on_feed_button_pressed"]
+[connection signal="pressed" from="TitleUI/SettingsMenu/SetOptions/ContactButton" to="." method="_on_contact_button_pressed"]
 [connection signal="pressed" from="TitleUI/SettingsMenu/SetOptions/SetBackButton" to="." method="_on_set_back_button_pressed"]
 [connection signal="pressed" from="TitleUI/SettingsGeneralMenu/SetGenOptions/GameDirButton" to="." method="_on_game_dir_button_pressed"]
 [connection signal="item_selected" from="TitleUI/SettingsGeneralMenu/SetGenOptions/LangButton" to="." method="_on_lang_button_item_selected"]
