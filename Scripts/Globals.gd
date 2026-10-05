@@ -7,8 +7,8 @@ static var islin = OS.has_feature("linux") or OS.has_feature("bsd")
 
 
 # define languages for indexing purposes
-const LANGUAGES = ["System", "English", "Polski", "Deutsch", "Osh zang jeng"]
-const LANGS = ["sys", "en", "pl", "de", "ozh"]
+const LANGUAGES = ["System", "English", "Polski", "Deutsch"]
+const LANGS = ["sys", "en", "pl", "de"]
 const RESOLUTIONS = ["854x480", "1280x720", "1920x1080"]
 
 func _notification(what: int) -> void:
