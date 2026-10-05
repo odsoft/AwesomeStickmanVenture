@@ -114,7 +114,6 @@ text = "users_create"
 
 [node name="SelUserButton" type="Button" parent="TitleUI/UserMenu/UserOptions" unique_id=178199955]
 layout_mode = 2
-tooltip_text = "tooltip_users_done"
 mouse_default_cursor_shape = 2
 text = "button_done"
 
@@ -208,51 +207,43 @@ vertical_alignment = 1
 
 [node name="GenButton" type="Button" parent="TitleUI/SettingsMenu/SetOptions" unique_id=599627033]
 layout_mode = 2
-tooltip_text = "tooltip_set_general"
 mouse_default_cursor_shape = 2
 text = "settings_general"
 
 [node name="VidButton" type="Button" parent="TitleUI/SettingsMenu/SetOptions" unique_id=933341178]
 layout_mode = 2
-tooltip_text = "tooltip_set_video"
 mouse_default_cursor_shape = 2
 text = "settings_video"
 
 [node name="AudButton" type="Button" parent="TitleUI/SettingsMenu/SetOptions" unique_id=1253574556]
 layout_mode = 2
-tooltip_text = "tooltip_set_audio"
 mouse_default_cursor_shape = 2
 text = "settings_audio"
 
 [node name="InpButton" type="Button" parent="TitleUI/SettingsMenu/SetOptions" unique_id=788362903]
 layout_mode = 2
-tooltip_text = "tooltip_set_input"
 mouse_default_cursor_shape = 2
 text = "settings_input"
 
 [node name="AccButton" type="Button" parent="TitleUI/SettingsMenu/SetOptions" unique_id=415530317]
 layout_mode = 2
-tooltip_text = "tooltip_set_access"
 mouse_default_cursor_shape = 8
 disabled = true
 text = "settings_access"
 
 [node name="AtrButton" type="Button" parent="TitleUI/SettingsMenu/SetOptions" unique_id=1001330167]
 layout_mode = 2
-tooltip_text = "tooltip_set_credits"
 mouse_default_cursor_shape = 8
 disabled = true
 text = "settings_credits"
 
 [node name="FeedButton" type="Button" parent="TitleUI/SettingsMenu/SetOptions" unique_id=1073641924]
 layout_mode = 2
-tooltip_text = "tooltip_set_feedback"
 mouse_default_cursor_shape = 2
 text = "settings_feedback"
 
 [node name="ContactButton" type="Button" parent="TitleUI/SettingsMenu/SetOptions" unique_id=958523882]
 layout_mode = 2
-tooltip_text = "tooltip_set_contact"
 mouse_default_cursor_shape = 2
 text = "settings_contact"
 
