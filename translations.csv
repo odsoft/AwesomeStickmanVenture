@@ -1,23 +1,21 @@
-key,en,pl,de
+key,en,pl,de,fr
 # --- BUTTONS & SWITCHES ---
-button_yes,"Yes","Tak","Ja"
-button_no,"No","Nie","Nein"
-button_ok,"Okay","Okej","Okay"
+button_yes,"Yes","Tak","Ja","Oui"
+button_no,"No","Nie","Nein","Non"
+button_ok,"Okay","Okej","Okay","D'accord"
 button_back,"Back","Wróć","Zurück"
-button_cancel,"Cancel","Anuluj","Abbrechen"
+button_cancel,"Cancel","Anuluj","Abbrechen","Annuler"
 button_done,"Done!","Gotowe!","Fertig!"
-button_erase,"Erase","Skasuj","Löschen"
+button_erase,"Erase","Skasuj","Löschen","Supprimer"
 switch_on,"ON","WŁ","EIN"
 switch_off,"OFF","WYŁ","AUS"
-ask_sure,"Are you sure?","Czy na pewno?","Bist du sicher?"
-error_title,"Error","Błąd","Fehler"
-# --- SPLASH SCREEN ---
-splash_presents,"OdSoft presents...","OdSoft przedstawia...","OdSoft präsentiert..."
+ask_sure,"Are you sure?","Czy na pewno?","Bist du sicher?","Es-tu sûr ?"
+error_title,"Error","Błąd","Fehler","Erreur"
 # --- TITLE SCREEN ---
 title_root_load,"Load game","Wczytaj grę","Spiel laden"
 title_root_new,"New game","Nowa gra","Neues Spiel"
 title_root_switch,"Switch user","Zmień użytkownika","Hutzer wechseln"
-title_root_set,"Settings","Ustawienia","Einstellungen"
+title_root_set,"Settings","Ustawienia","Einstellungen","Paramètres"
 title_root_exit,"Close game","Zamknij grę","Spiel schließen"
 # --- SETTINGS ---
 settings_general,"General","Ogólne","Allgemein"
@@ -31,12 +29,12 @@ settings_contact,"Write an email","Napisz maila","E-Mail schreiben"
 # --- GENERAL SETTINGS ---
 set_general_opendir,"Open game directory","Otwórz katalog gry","Spielverzeichnis öffnen"
 set_general_lang,"Language","Język","Sprache"
-set_general_erase,"Erase settings","Skasuj ustawienia","Einstellungen löschen"
+set_general_erase,"Erase settings","Skasuj ustawienia","Einstellungen löschen","Supprimer les paramètres"
 # --- VIDEO SETTINGS ---
 set_video_gpu,"Graphics card: %s","Karta graficzna: %s","Grafikkarte: %s"
 set_video_gpu_noid,"Couldn't identify","Nie rozpoznano","Nicht erkannt"
 set_video_resolution,"Resolution","Rozdzielczość","Auflösung"
-set_video_vsync,"V-Sync","V-Sync","V-Sync"
+set_video_vsync,"V-Sync","V-Sync","V-Sync","V-Sync"
 set_video_fpslimit,"Limit FPS to %s","Ogranicz FPS do %s","FPS auf %s begrenzen"
 set_video_fpslimit_nolimit,"Unlimited","Bez limitu","Unbegrenzt"
 set_video_dispmode,"Display mode","Tryb wyświetlania","Anzeigemodus"
