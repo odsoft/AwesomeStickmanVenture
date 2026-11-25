@@ -288,3 +288,17 @@ func _on_switch_button_pressed() -> void:
 func _on_contact_button_pressed() -> void:
 	OS.shell_open("mailto:odsoftdev@pm.me")
 	SfxPlayer.play_effect("click-normal")
+
+
+func _on_vsync_button_toggled(toggled_on: bool) -> void:
+	if toggled_on:
+		SfxPlayer.play_effect("click-normal")
+	else:
+		SfxPlayer.play_effect("click-back")
+
+
+func _on_fps_button_toggled(toggled_on: bool) -> void:
+	if toggled_on:
+		SfxPlayer.play_effect("click-normal")
+	else:
+		SfxPlayer.play_effect("click-back")
