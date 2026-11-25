@@ -1,66 +1,66 @@
 key,en,pl,de,fr,cs
 # --- BUTTONS & SWITCHES ---
-button_yes,"Yes","Tak","Ja","Oui"
-button_no,"No","Nie","Nein","Non"
-button_ok,"Okay","Okej","Okay","D'accord"
-button_back,"Back","Wróć","Zurück","Retour"
-button_cancel,"Cancel","Anuluj","Abbrechen","Annuler"
-button_done,"Done!","Gotowe!","Fertig!","Terminé !"
-button_erase,"Erase","Skasuj","Löschen","Supprimer"
-switch_on,"ON","WŁ","EIN","MAR"
-switch_off,"OFF","WYŁ","AUS","ARR"
-ask_sure,"Are you sure?","Czy na pewno?","Bist du sicher?","Es-tu sûr ?"
-error_title,"Error","Błąd","Fehler","Erreur"
-erase_title,"HOLD UP!","ZACZEKAJ!","WARTE!","ATTENDS !"
+button_yes,"Yes","Tak","Ja","Oui","Ano"
+button_no,"No","Nie","Nein","Non","Ne"
+button_ok,"Okay","Okej","Okay","D'accord","Dobře"
+button_back,"Back","Wróć","Zurück","Retour","Zpět"
+button_cancel,"Cancel","Anuluj","Abbrechen","Annuler","Zrušit"
+button_done,"Done!","Gotowe!","Fertig!","Terminé !","Hotovo!"
+button_erase,"Erase","Skasuj","Löschen","Supprimer","Smazat"
+switch_on,"ON","WŁ","EIN","MAR","ZAP"
+switch_off,"OFF","WYŁ","AUS","ARR","VYP"
+ask_sure,"Are you sure?","Czy na pewno?","Bist du sicher?","Es-tu sûr ?","Opravdu?"
+error_title,"Error","Błąd","Fehler","Erreur","Chyba"
+erase_title,"HOLD UP!","ZACZEKAJ!","WARTE!","ATTENDS !","POČKEJ!"
 # --- TITLE SCREEN ---
-title_root_load,"Load game","Wczytaj grę","Spiel laden","Charger le jeu"
-title_root_new,"New game","Nowa gra","Neues Spiel","Nouveau jeu"
-title_root_switch,"Switch user","Zmień użytkownika","Nutzer wechseln","Changer d'utilisateur"
-title_root_set,"Settings","Ustawienia","Einstellungen","Paramètres"
-title_root_exit,"Close game","Zamknij grę","Spiel schließen","Fermer le jeu"
+title_root_load,"Load game","Wczytaj grę","Spiel laden","Charger le jeu","Načíst hru"
+title_root_new,"New game","Nowa gra","Neues Spiel","Nouveau jeu","Nová hra"
+title_root_switch,"Switch user","Zmień użytkownika","Nutzer wechseln","Changer d'utilisateur","Změnit uživatele"
+title_root_set,"Settings","Ustawienia","Einstellungen","Paramètres","Nastavení"
+title_root_exit,"Close game","Zamknij grę","Spiel schließen","Fermer le jeu","Ukončit hru"
 # --- SETTINGS ---
-settings_general,"General","Ogólne","Allgemein","Général"
-settings_video,"Video","Obraz","Bild","Video"
-settings_audio,"Audio","Dźwięk","Audio","Audio"
-settings_input,"Input","Sterowanie","Steuerung",
-settings_access,"Accessibility","Ułatwienia dostępu","Barrierefreiheit",
-settings_credits,"Credits and attributions","Twórcy i atrybucje","Mitwirkende und Namensnennung","Crédits et attributions"
-settings_feedback,"Open GitHub","Otwórz GitHuba","GitHub öffnen","Ouvrir GitHub"
-settings_contact,"Write an email","Napisz maila","E-Mail schreiben",
+settings_general,"General","Ogólne","Allgemein","Général","Obecné"
+settings_video,"Video","Obraz","Bild","Video","Obraz"
+settings_audio,"Audio","Dźwięk","Audio","Audio","Zvuk"
+settings_input,"Input","Sterowanie","Steuerung",,"Ovládání"
+settings_access,"Accessibility","Ułatwienia dostępu","Barrierefreiheit",,"Přístupnost"
+settings_credits,"Credits and attributions","Twórcy i atrybucje","Mitwirkende und Namensnennung","Crédits et attributions","Tvůrci a zdroje"
+settings_feedback,"Open GitHub","Otwórz GitHuba","GitHub öffnen","Ouvrir GitHub","Otevřít GitHub"
+settings_contact,"Write an email","Napisz maila","E-Mail schreiben",,"Napsat e-mail"
 # --- GENERAL SETTINGS ---
-set_general_opendir,"Open game directory","Otwórz katalog gry","Spielverzeichnis öffnen","Ouvrir le dossier du jeu"
-set_general_lang,"Language","Język","Sprache","Langue"
-set_general_erase,"Erase settings","Skasuj ustawienia","Einstellungen löschen","Supprimer les paramètres"
+set_general_opendir,"Open game directory","Otwórz katalog gry","Spielverzeichnis öffnen","Ouvrir le dossier du jeu","Otevřít složku hry"
+set_general_lang,"Language","Język","Sprache","Langue","Jazyk"
+set_general_erase,"Erase settings","Skasuj ustawienia","Einstellungen löschen","Supprimer les paramètres","Smazat nastavení"
 # --- VIDEO SETTINGS ---
-set_video_gpu,"Graphics card: %s","Karta graficzna: %s","Grafikkarte: %s","Carte graphique : %s"
-set_video_gpu_noid,"Couldn't identify","Nie rozpoznano","Nicht erkannt","Non identifié"
-set_video_resolution,"Resolution","Rozdzielczość","Auflösung",
-set_video_vsync,"V-Sync","V-Sync","V-Sync",
-set_video_fpslimit,"Limit FPS to %s","Ogranicz FPS do %s","FPS auf %s begrenzen",
-set_video_fpslimit_nolimit,"Unlimited","Bez limitu","Unbegrenzt",
-set_video_dispmode,"Display mode","Tryb wyświetlania","Anzeigemodus",
-set_video_dispmode_fullscreen,"Fullscreen","Pełny ekran","Vollbild",
-set_video_dispmode_borderless,"Borderless","Bez ramek","Randlos",
-set_video_dispmode_windowed,"Windowed","W oknie","Fenstermodus",
-set_video_showfps,"Show FPS","Pokaż FPS","FPS anzeigen",
+set_video_gpu,"Graphics card: %s","Karta graficzna: %s","Grafikkarte: %s","Carte graphique : %s","Grafická karta: %s"
+set_video_gpu_noid,"Couldn't identify","Nie rozpoznano","Nicht erkannt","Non identifié","Nerozpoznáno"
+set_video_resolution,"Resolution","Rozdzielczość","Auflösung",,"Rozlišení"
+set_video_vsync,"V-Sync","V-Sync","V-Sync",,"V-Sync"
+set_video_fpslimit,"Limit FPS to %s","Ogranicz FPS do %s","FPS auf %s begrenzen",,"Omezit FPS na %s"
+set_video_fpslimit_nolimit,"Unlimited","Bez limitu","Unbegrenzt",,"Bez omezení"
+set_video_dispmode,"Display mode","Tryb wyświetlania","Anzeigemodus",,"Režim zobrazení"
+set_video_dispmode_fullscreen,"Fullscreen","Pełny ekran","Vollbild",,"Celá obrazovka"
+set_video_dispmode_borderless,"Borderless","Bez ramek","Randlos",,"Bez okrajů"
+set_video_dispmode_windowed,"Windowed","W oknie","Fenstermodus",,"V okně"
+set_video_showfps,"Show FPS","Pokaż FPS","FPS anzeigen",,"Zobrazit FPS"
 # --- AUDIO SETTINGS ---
-set_audio_out,"Audio output","Wyjście audio","Audioausgabe",
-set_audio_volume,"Volume: %d%%","Głośność: %d%%","Lautstärke: %d%%",
-set_audio_bgm_volume,"BGM Volume: %d%%","Głośność muzyki: %d%%","Musik-Lautstärke: %d%%",
-set_audio_sfx_volume,"SFX Volume: %d%%","Głośność efektów: %d%%","SFX-Lautstärke: %d%%",
+set_audio_out,"Audio output","Wyjście audio","Audioausgabe",,"Zvukový výstup"
+set_audio_volume,"Volume: %d%%","Głośność: %d%%","Lautstärke: %d%%",,"Hlasitost: %d%%"
+set_audio_bgm_volume,"BGM Volume: %d%%","Głośność muzyki: %d%%","Musik-Lautstärke: %d%%",,"Hlasitost hudby: %d%%"
+set_audio_sfx_volume,"SFX Volume: %d%%","Głośność efektów: %d%%","SFX-Lautstärke: %d%%",,"Hlasitost efektů: %d%%"
 # --- INPUT SETTINGS ---
 # --- ACCESSIBILITY SETTINGS ---
-set_access_shakeint,"Shake intensity","Intensywność wstrząsów",,
-set_access_flashred,"Reduce flashes","Ogranicz błyski",,
-set_access_motionred,"Reduce motion","Ogranicz ruchy",,
-set_access_cutscenered,"Skip optional cutscenes","Pomiń opcjonalne przerywniki",,
+set_access_shakeint,"Shake intensity","Intensywność wstrząsów",,,"Intenzita otřesů"
+set_access_flashred,"Reduce flashes","Ogranicz błyski",,,"Omezit záblesky"
+set_access_motionred,"Reduce motion","Ogranicz ruchy",,,"Omezit pohyb"
+set_access_cutscenered,"Skip optional cutscenes","Pomiń opcjonalne przerywniki",,,"Přeskakovat volitelné scény"
 # --- USER SCREEN ---
-users_welcome,"Welcome to ASV!","Witamy w ASV!","Willkommen bei ASV!",,
-users_select,"Select a user...","Wybierz użytkownika...","Wähl einen Nutzer aus...",,
-users_new,"New user...","Nowy użytkownik...","Neuer Nutzer...",,
-users_create,"Create","Utwórz","Erstellen",,
-users_error_none,"You need to select a user.","Musisz wybrać użytkownika.","Du musst einen Nutzer auswählen.",,
-users_error_exists,"This user already exists.","Ten użytkownik już istnieje.","Dieser Nutzer existiert bereits.",,
-users_error_noexist,"This user doesn't exist.","Ten użytkownik nie istnieje.","Dieser Nutzer existiert nicht.",,
-users_erase,"Erase user","Skasuj użytkownika","Nutzer löschen",,
-users_eraseall,"Erase all users","Skasuj wszystkich","Alle Nutzer löschen",,
+users_welcome,"Welcome to ASV!","Witamy w ASV!","Willkommen bei ASV!",,"Vítej v ASV!"
+users_select,"Select a user...","Wybierz użytkownika...","Wähl einen Nutzer aus...",,"Vyber uživatele..."
+users_new,"New user...","Nowy użytkownik...","Neuer Nutzer...",,"Nový uživatel..."
+users_create,"Create","Utwórz","Erstellen",,"Vytvořit"
+users_error_none,"You need to select a user.","Musisz wybrać użytkownika.","Du musst einen Nutzer auswählen.",,"Musíš vybrat uživatele."
+users_error_exists,"This user already exists.","Ten użytkownik już istnieje.","Dieser Nutzer existiert bereits.",,"Tento uživatel už existuje."
+users_error_noexist,"This user doesn't exist.","Ten użytkownik nie istnieje.","Dieser Nutzer existiert nicht.",,"Tento uživatel neexistuje."
+users_erase,"Erase user","Skasuj użytkownika","Nutzer löschen",,"Smazat uživatele"
+users_eraseall,"Erase all users","Skasuj wszystkich","Alle Nutzer löschen",,"Smazat všechny uživatele"
