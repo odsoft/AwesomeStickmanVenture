@@ -329,15 +329,15 @@ offset_bottom = 20.0
 grow_horizontal = 2
 grow_vertical = 2
 
-[node name="EraseConfirmLabelHead" type="Label" parent="TitleUI/SettingsGeneralMenu/EraseConfirm/EraseConfirmOptions" unique_id=793332533]
+[node name="EraseHeader" type="Label" parent="TitleUI/SettingsGeneralMenu/EraseConfirm/EraseConfirmOptions" unique_id=793332533]
 layout_mode = 2
-text = "ask_sure"
+text = "erase_title"
 horizontal_alignment = 1
 vertical_alignment = 1
 
 [node name="EraseConfirmLabel" type="Label" parent="TitleUI/SettingsGeneralMenu/EraseConfirm/EraseConfirmOptions" unique_id=392541775]
 layout_mode = 2
-text = "set_general_erase_ask"
+text = "ask_sure"
 horizontal_alignment = 1
 vertical_alignment = 1
 
