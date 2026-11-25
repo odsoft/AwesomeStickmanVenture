@@ -50,7 +50,7 @@ const DEFAULT_SETTINGS = {
 const SETTINGS_ALLOWED = {
 	# allowed values for settings, for validation purposes; if an array has exactly two floats, it will be treated as a range
 	"general": {
-		"language": [0, 1, 2, 3],
+		"language": [0, 1, 2, 3, 4, 5], # system, english, polish, german, french, czech
 	},
 	"video": {
 		"display": [0, 1, 2],
