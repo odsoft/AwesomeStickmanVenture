@@ -110,6 +110,7 @@ func _on_vol_slider_drag_ended(value_changed: bool) -> void:
 		Globals.apply_settings()
 		$TitleUI/SettingsAudioMenu/SetAudOptions/VolLabel.text = tr("set_audio_volume") % [Globals.current_settings["audio"]["master_volume"] * 100]
 		Globals.save_settings()
+	SfxPlayer.play_effect("click-normal")
 
 func _on_bgm_vol_slider_drag_ended(value_changed: bool) -> void:
 	# change music volume
@@ -118,6 +119,7 @@ func _on_bgm_vol_slider_drag_ended(value_changed: bool) -> void:
 		Globals.apply_settings()
 		$TitleUI/SettingsAudioMenu/SetAudOptions/BgmVolLabel.text = tr("set_audio_bgm_volume") % [Globals.current_settings["audio"]["bgm_volume"] * 100]
 		Globals.save_settings()
+	SfxPlayer.play_effect("click-normal")
 
 func _on_sfx_vol_slider_drag_ended(value_changed: bool) -> void:
 	# change sfx volume
@@ -126,6 +128,7 @@ func _on_sfx_vol_slider_drag_ended(value_changed: bool) -> void:
 		Globals.apply_settings()
 		$TitleUI/SettingsAudioMenu/SetAudOptions/SfxVolLabel.text = tr("set_audio_sfx_volume") % [Globals.current_settings["audio"]["sfx_volume"] * 100]
 		Globals.save_settings()
+	SfxPlayer.play_effect("click-normal")
 	SfxPlayer.test_sound()
 
 func _on_set_gen_back_button_pressed() -> void:
@@ -162,7 +165,7 @@ func _on_fps_slider_drag_ended(value_changed: bool) -> void:
 			$TitleUI/SettingsVideoMenu/SetVidOptions/FpsLabel.text = tr("set_video_fpslimit") % [tr("set_video_fpslimit_nolimit")]
 		else:
 			$TitleUI/SettingsVideoMenu/SetVidOptions/FpsLabel.text = tr("set_video_fpslimit") % [str(int($TitleUI/SettingsVideoMenu/SetVidOptions/FpsSlider.value * 10))]
-
+	SfxPlayer.play_effect("click-normal")
 
 func _on_set_inp_back_button_pressed() -> void:
 	$TitleUI/SettingsInputMenu.visible = false
@@ -186,15 +189,10 @@ func _on_feed_button_pressed() -> void:
 	OS.shell_open("https://github.com/odsoft/AwesomeStickmanVenture")
 	SfxPlayer.play_effect("click-normal")
 
-# unused
-# func _on_title_bgm_button_toggled(toggled_on: bool) -> void:
-	# Globals.current_settings["audio"]["title_bgm"] = toggled_on
-	# Globals.apply_settings()
-	# Globals.save_settings()
-
 
 func _on_erase_no_button_pressed() -> void:
 	$TitleUI/SettingsGeneralMenu/EraseConfirm.visible = false
+	SfxPlayer.play_effect("click-back")
 
 
 func _on_erase_yes_button_pressed() -> void:
@@ -203,6 +201,7 @@ func _on_erase_yes_button_pressed() -> void:
 	Globals.save_settings()
 	$TitleUI/SettingsGeneralMenu.visible = false
 	$TitleUI/TitleMenu.visible = true
+	SfxPlayer.play_effect("click-normal")
 
 
 func _on_erase_set_button_pressed() -> void:
