@@ -158,7 +158,6 @@ text = "title_root_switch"
 
 [node name="SetButton" type="Button" parent="TitleUI/TitleMenu/TitleOptions" unique_id=456531742]
 layout_mode = 2
-tooltip_text = "tooltip_title_settings"
 mouse_default_cursor_shape = 2
 text = "title_root_set"
 
